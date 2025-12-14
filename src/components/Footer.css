@@ -1,0 +1,49 @@
+/* ================================
+   Footer CSS Isolation Layer
+   ================================ */
+
+.footer-scope {
+  /* Prevent global styles from leaking */
+  all: unset;
+  display: block;
+}
+
+/* Re-enable layout behavior */
+.footer-scope *,
+.footer-scope *::before,
+.footer-scope *::after {
+  box-sizing: border-box;
+}
+
+/* Restore semantic defaults */
+.footer-scope a {
+  all: unset;
+  cursor: pointer;
+}
+
+.footer-scope ul {
+  all: unset;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-scope li {
+  all: unset;
+}
+
+.footer-scope h2,
+.footer-scope h3,
+.footer-scope p {
+  all: unset;
+  display: block;
+}
+
+.footer-scope img {
+  display: block;
+}
+
+/* Allow Tailwind hover & transition utilities */
+.footer-scope a:hover {
+  opacity: 1;
+}
